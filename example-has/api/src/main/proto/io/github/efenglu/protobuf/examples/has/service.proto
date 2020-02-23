@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package io.github.efenglu.protobuf.examples.has;
+
+option java_multiple_files = true;
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/wrappers.proto";
+
+service MyDataService {
+    rpc Update (UpdateMyDataRequest) returns (UpdateMyDataResponse);
+}
+
+message MyData {
+    int32 id = 1;
+    string stringValue = 2;
+    SubData subData = 3;
+}
+
+message SubData {
+    int64 bigValue = 1;
+}
+
+message UpdateMyDataRequest {
+    int32 id = 1;
+    google.protobuf.StringValue stringValue = 2;
+    UpdateSubData subData = 3;
+}
+
+message UpdateSubData {
+    google.protobuf.Int64Value bigValue = 1;
+}
+
+message UpdateMyDataResponse {
+    MyData new_data = 1;
+}

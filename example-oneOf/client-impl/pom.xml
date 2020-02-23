@@ -18,7 +18,27 @@
             <artifactId>example-oneOf-service-api</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.repaint.maven</groupId>
+                <artifactId>tiles-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <tiles>
+                        <tile>io.github.efenglu.maven.tiles:project-java:${tile.version}</tile>
+                    </tiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

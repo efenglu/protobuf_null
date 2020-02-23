@@ -1,6 +1,4 @@
-package io.github.efenglu.protobuf.nullExamples;
-
-import io.github.efenglu.protobuf.examples.fieldmask.MyData;
+package io.github.efenglu.protobuf.examples.has;
 
 import java.util.List;
 

@@ -1,12 +1,11 @@
 syntax = "proto3";
 
-package io.github.efenglu.protobuf.examples;
+package io.github.efenglu.protobuf.examples.fieldmask;
 
 option java_multiple_files = true;
 
 import "google/protobuf/struct.proto";
 import "google/protobuf/field_mask.proto";
-import "google/protobuf/wrappers.proto";
 
 service MyDataService {
     rpc Update (UpdateMyDataRequest) returns (UpdateMyDataResponse);

@@ -1,12 +1,12 @@
 package io.github.efenglu.protobuf.nullExamples;
 
-import io.github.efenglu.protobuf.examples.MyData;
-import io.github.efenglu.protobuf.examples.MyDataServiceGrpc;
-import io.github.efenglu.protobuf.examples.NullableString;
-import io.github.efenglu.protobuf.examples.NullableSubData;
-import io.github.efenglu.protobuf.examples.SubData;
-import io.github.efenglu.protobuf.examples.UpdateMyDataRequest;
-import io.github.efenglu.protobuf.examples.UpdateMyDataResponse;
+import io.github.efenglu.protobuf.examples.oneof.MyData;
+import io.github.efenglu.protobuf.examples.oneof.MyDataServiceGrpc;
+import io.github.efenglu.protobuf.examples.oneof.NullableString;
+import io.github.efenglu.protobuf.examples.oneof.NullableSubData;
+import io.github.efenglu.protobuf.examples.oneof.SubData;
+import io.github.efenglu.protobuf.examples.oneof.UpdateMyDataRequest;
+import io.github.efenglu.protobuf.examples.oneof.UpdateMyDataResponse;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 
@@ -27,6 +27,7 @@ public class OneOfServiceImpl extends MyDataServiceGrpc.MyDataServiceImplBase {
                         break;
                     case DATA:
                         nullableString = nullableStringValue.getData();
+                        break;
                     default:
                         // TODO: Neither null nor data, what to do?
                         throw Status.INVALID_ARGUMENT.asRuntimeException();
@@ -42,6 +43,7 @@ public class OneOfServiceImpl extends MyDataServiceGrpc.MyDataServiceImplBase {
                         break;
                     case DATA:
                         nullableSubData = nullableSubDataValue.getData();
+                        break;
                     default:
                         // TODO: Neither null nor data, what to do?
                         throw Status.INVALID_ARGUMENT.asRuntimeException();

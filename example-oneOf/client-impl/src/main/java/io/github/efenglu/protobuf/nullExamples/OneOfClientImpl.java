@@ -1,12 +1,12 @@
 package io.github.efenglu.protobuf.nullExamples;
 
 import com.google.protobuf.NullValue;
-import io.github.efenglu.protobuf.examples.MyData;
-import io.github.efenglu.protobuf.examples.MyDataServiceGrpc;
-import io.github.efenglu.protobuf.examples.NullableString;
-import io.github.efenglu.protobuf.examples.NullableSubData;
-import io.github.efenglu.protobuf.examples.SubData;
-import io.github.efenglu.protobuf.examples.UpdateMyDataRequest;
+import io.github.efenglu.protobuf.examples.oneof.MyData;
+import io.github.efenglu.protobuf.examples.oneof.MyDataServiceGrpc;
+import io.github.efenglu.protobuf.examples.oneof.NullableString;
+import io.github.efenglu.protobuf.examples.oneof.NullableSubData;
+import io.github.efenglu.protobuf.examples.oneof.SubData;
+import io.github.efenglu.protobuf.examples.oneof.UpdateMyDataRequest;
 
 public class OneOfClientImpl {
 

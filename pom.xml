@@ -12,6 +12,7 @@
     <modules>
         <module>example-oneOf</module>
         <module>example-fieldMask</module>
+        <module>example-has</module>
     </modules>
 
     <url>https://github.com/efenglu/protobuf_null</url>

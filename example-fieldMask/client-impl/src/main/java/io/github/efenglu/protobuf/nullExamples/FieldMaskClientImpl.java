@@ -1,10 +1,10 @@
 package io.github.efenglu.protobuf.nullExamples;
 
 import com.google.protobuf.util.FieldMaskUtil;
-import io.github.efenglu.protobuf.examples.ListMyDataRequest;
-import io.github.efenglu.protobuf.examples.MyData;
-import io.github.efenglu.protobuf.examples.MyDataServiceGrpc;
-import io.github.efenglu.protobuf.examples.UpdateMyDataRequest;
+import io.github.efenglu.protobuf.examples.fieldmask.ListMyDataRequest;
+import io.github.efenglu.protobuf.examples.fieldmask.MyData;
+import io.github.efenglu.protobuf.examples.fieldmask.MyDataServiceGrpc;
+import io.github.efenglu.protobuf.examples.fieldmask.UpdateMyDataRequest;
 
 import java.util.List;
 

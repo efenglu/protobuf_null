@@ -6,17 +6,16 @@
         <artifactId>protobuf-null-examples</artifactId>
         <groupId>io.github.efenglu.protobuf.nullExamples</groupId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>example-oneOf</artifactId>
+    <artifactId>example-has</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>client-impl</module>
         <module>api</module>
+        <module>client-impl</module>
         <module>server-impl</module>
     </modules>
+
 
 </project>
