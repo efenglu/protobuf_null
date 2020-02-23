@@ -1,0 +1,50 @@
+{
+  "definitions": [
+    {
+      "protopath": "io:/:github:/:efenglu:/:protobuf:/:examples:/:types.proto",
+      "def": {
+        "messages": [
+          {
+            "name": "MyData",
+            "fields": [
+              {
+                "id": 1,
+                "name": "intValue",
+                "type": "int32"
+              },
+              {
+                "id": 2,
+                "name": "stringValue",
+                "type": "string"
+              },
+              {
+                "id": 3,
+                "name": "innerValue",
+                "type": "SubData"
+              }
+            ]
+          },
+          {
+            "name": "SubData",
+            "fields": [
+              {
+                "id": 1,
+                "name": "bigValue",
+                "type": "int64"
+              }
+            ]
+          }
+        ],
+        "package": {
+          "name": "io.github.efenglu.protobuf.examples"
+        },
+        "options": [
+          {
+            "name": "java_multiple_files",
+            "value": "true"
+          }
+        ]
+      }
+    }
+  ]
+}

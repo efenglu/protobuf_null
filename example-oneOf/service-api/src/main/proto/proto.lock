@@ -1,0 +1,110 @@
+{
+  "definitions": [
+    {
+      "protopath": "io:/:github:/:efenglu:/:protobuf:/:examples:/:service.proto",
+      "def": {
+        "messages": [
+          {
+            "name": "MyData",
+            "fields": [
+              {
+                "id": 1,
+                "name": "intValue",
+                "type": "int32"
+              },
+              {
+                "id": 2,
+                "name": "stringValue",
+                "type": "NullableString"
+              },
+              {
+                "id": 3,
+                "name": "subData",
+                "type": "NullableSubData"
+              }
+            ]
+          },
+          {
+            "name": "SubData",
+            "fields": [
+              {
+                "id": 1,
+                "name": "bigValue",
+                "type": "int64"
+              }
+            ]
+          },
+          {
+            "name": "NullableSubData",
+            "fields": [
+              {
+                "id": 1,
+                "name": "null",
+                "type": "google.protobuf.NullValue"
+              },
+              {
+                "id": 2,
+                "name": "data",
+                "type": "SubData"
+              }
+            ]
+          },
+          {
+            "name": "NullableString",
+            "fields": [
+              {
+                "id": 1,
+                "name": "null",
+                "type": "google.protobuf.NullValue"
+              },
+              {
+                "id": 2,
+                "name": "data",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "name": "UpdateMyDataRequest",
+            "fields": [
+              {
+                "id": 1,
+                "name": "data",
+                "type": "MyData"
+              }
+            ]
+          },
+          {
+            "name": "UpdateMyDataResponse"
+          }
+        ],
+        "services": [
+          {
+            "name": "MyDataService",
+            "rpcs": [
+              {
+                "name": "UpateMyData",
+                "in_type": "UpdateMyDataRequest",
+                "out_type": "UpdateMyDataResponse"
+              }
+            ]
+          }
+        ],
+        "imports": [
+          {
+            "path": "google/protobuf/struct.proto"
+          }
+        ],
+        "package": {
+          "name": "io.github.efenglu.protobuf.examples"
+        },
+        "options": [
+          {
+            "name": "java_multiple_files",
+            "value": "true"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package io.github.efenglu.protobuf.examples;
+
+option java_multiple_files = true;
+
+import "google/protobuf/struct.proto";
+
+service MyDataService {
+    rpc UpateMyData (UpdateMyDataRequest) returns (UpdateMyDataResponse);
+}
+
+message MyData {
+    int32 intValue = 1;
+    NullableString stringValue = 2;
+    NullableSubData subData = 3;
+}
+
+message SubData {
+    int64 bigValue = 1;
+}
+
+message NullableSubData {
+    oneof kind {
+        google.protobuf.NullValue null = 1;
+        SubData data = 2;
+    }
+}
+
+message NullableString {
+    oneof kind {
+        google.protobuf.NullValue null = 1;
+        string data = 2;
+    }
+}
+
+message UpdateMyDataRequest {
+    MyData data = 1;
+}
+
+
+message UpdateMyDataResponse {
+
+}
