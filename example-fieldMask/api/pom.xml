@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>example-optional-api</artifactId>
+    <artifactId>example-fieldMask-api</artifactId>
 
     <properties>
         <checkstyle.skip>true</checkstyle.skip>

@@ -14,6 +14,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>api</module>
+        <module>client-impl</module>
+        <module>server-impl</module>
     </modules>
 
 

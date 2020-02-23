@@ -10,7 +10,9 @@ import io.github.efenglu.protobuf.examples.UpdateMyDataRequest;
 
 public class OneOfClientImpl {
 
-    public void sendNullValue(MyDataServiceGrpc.MyDataServiceFutureStub service) {
+    MyDataServiceGrpc.MyDataServiceBlockingStub service;
+
+    public void sendNullValue() {
         UpdateMyDataRequest request = UpdateMyDataRequest.newBuilder()
                 .setData(MyData.newBuilder()
                         .setStringValue(NullableString.newBuilder().setNull(NullValue.NULL_VALUE).build())
@@ -21,7 +23,7 @@ public class OneOfClientImpl {
         service.upateMyData(request);
     }
 
-    public void sendValue(MyDataServiceGrpc.MyDataServiceFutureStub service) {
+    public void sendValue() {
         UpdateMyDataRequest request = UpdateMyDataRequest.newBuilder()
                 .setData(MyData.newBuilder()
                         .setStringValue(NullableString.newBuilder().setData("hello").build())

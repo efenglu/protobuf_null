@@ -8,14 +8,13 @@ import "google/protobuf/struct.proto";
 import "google/protobuf/field_mask.proto";
 import "google/protobuf/wrappers.proto";
 
-
 service MyDataService {
     rpc Update (UpdateMyDataRequest) returns (UpdateMyDataResponse);
     rpc List (ListMyDataRequest) returns (ListMyDataResponse);
 }
 
 message MyData {
-    int32 intValue = 1;
+    int32 id = 1;
     string stringValue = 2;
     SubData subData = 3;
 }
@@ -29,16 +28,14 @@ message UpdateMyDataRequest {
     google.protobuf.FieldMask field_mask = 2;
 }
 
-
 message UpdateMyDataResponse {
     MyData new_data = 1;
 }
 
 message ListMyDataRequest {
-    int32 intValue = 1;
+    int32 id = 1;
     google.protobuf.FieldMask field_mask = 3;
 }
-
 
 message ListMyDataResponse {
     repeated MyData data = 1;
