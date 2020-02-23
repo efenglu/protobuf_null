@@ -10,9 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>api</module>
         <module>example-oneOf</module>
-        <module>example-has</module>
         <module>example-fieldMask</module>
     </modules>
 
